@@ -1,0 +1,442 @@
+// Обнуление стилей
+@import "nullstyle.scss";
+
+// < ПОДКЛЮЧЕНИЕ ШРИФТОВ>
+// </ ПОДКЛЮЧЕНИЕ ШРИФТОВ>
+
+// <ПЕРЕМЕННЫЕ>
+$mw: 1440;
+$color1: #141414;
+$color2: #555555;
+// </ПЕРЕМЕННЫЕ>
+
+// < ШРИФТЫ ПО УМОЛЧАНИЮ>
+$fontfamily: "";
+// </ ШРИФТЫ ПО УМОЛЧАНИЮ>
+
+// < ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ>
+@import "header.scss";
+@import "footer.scss";
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Playfair+Display&display=swap");
+// </ ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ>
+
+// < ОСНОВНЫЕ СТИЛИ>
+body {
+  font-family: "Manrope", sans-serif;
+  color: #555555;
+  height: 100%;
+  &.lock {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.container {
+  max-width: $mw + px;
+  margin: 0 auto;
+  width: 100%;
+}
+.content {
+  margin: 105px 0px 0px 0px;
+}
+.button {
+  display: inline-block;
+  padding: 19px 30px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #141414;
+  border: 3px solid #5c8692;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background: #5c8692;
+    color: #fff;
+  }
+}
+.title {
+  font-size: 15px;
+  color: #5c8692;
+  margin: 0px 0px 4px 0px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.sub-title {
+  font-family: Playfair Display;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.45px;
+  color: #141414;
+}
+.text {
+  font-size: 18px;
+  line-height: 31px;
+}
+// </ ОСНОВНЫЕ СТИЛИ>
+
+/* Welcome */
+//======================================================
+.welcome {
+  background: #ebf3f5;
+  // .welcome__body
+
+  &__body {
+    padding: 120px;
+    display: flex;
+    align-items: center;
+  }
+
+  // .welcome__column
+
+  &__column {
+    flex: 0 0 50%;
+  }
+
+  // .welcome__title
+
+  &__title {
+    display: flex;
+    align-items: center;
+    span {
+      margin: 0px 0px 0px 7px;
+    }
+  }
+
+  // .welcome__sub-title
+
+  &__sub-title {
+    line-height: 71.5px;
+    font-size: 55px;
+    width: 66.6%;
+    color: $color1;
+    font-family: "Playfair Display", serif;
+  }
+
+  // .welcome__text
+
+  &__text {
+    width: 80.5%;
+    font-size: 19px;
+    line-height: 30px;
+    margin: 14px 0px 26px 0px;
+  }
+
+  // .welcome__button
+
+  &__button {
+    color: #fff;
+    background: #5c8692;
+    border: 0;
+  }
+  // .welcome__img
+  &__img {
+    position: relative;
+    padding: 0px 0px 100% 0px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+//======================================================
+
+/* Procedures */
+//======================================================
+.procedures {
+  // .procedures__body
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    padding: 100px 120px 110px;
+    gap: 40px 30px;
+  }
+
+  // .procedures__column
+
+  &__column {
+    display: grid;
+    grid-template: auto auto 1fr 58px / 1fr;
+  }
+
+  // .procedures__img
+
+  &__img {
+    position: relative;
+    padding: 0px 0px 76% 0px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .procedures__title
+
+  &__title {
+    font-size: 26px;
+    margin: 16px 0px 0px 0px;
+    font-family: "Playfair Display", serif;
+    color: $color1;
+    letter-spacing: 0.312px;
+  }
+
+  // .procedures__info
+
+  &__info {
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.36px;
+    margin: 13px 0px 17px;
+  }
+
+  // .procedures__button
+
+  &__button {
+    color: #141414;
+    border: 3px solid #5c8692;
+    transition: all 0.3s ease 0s;
+    justify-self: start;
+    &:hover {
+      background: #5c8692;
+      color: #fff;
+    }
+  }
+}
+//======================================================
+
+/* Care */
+//======================================================
+.care {
+  background: #ebf3f5;
+  // .care__body
+
+  &__body {
+    padding: 105px 120px;
+    display: flex;
+    align-items: center;
+  }
+
+  // .care__column
+
+  &__column {
+    flex: 0 0 50%;
+    &:not(:last-child) {
+      margin: 0px 80px 0px 0px;
+    }
+  }
+
+  // .care__title
+
+  &__title {
+  }
+
+  // .care__sub-title
+
+  &__sub-title {
+    margin: 0px 0px 14px 0px;
+  }
+
+  // .care__text
+
+  &__text {
+    margin: 0px 0px 60px 0px;
+  }
+
+  // .care__items
+
+  &__items {
+    display: flex;
+    gap: 20px 12px;
+  }
+
+  // .care__item
+
+  &__item {
+    border: 2px solid #1e2c30;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 50px;
+    img {
+      width: 80px;
+      height: 80px;
+      margin: 0px 0px 12px 0px;
+      object-fit: contain;
+    }
+    span {
+      width: 45%;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: center;
+      color: #141414;
+    }
+  }
+
+  // .care__img
+
+  &__img {
+    position: relative;
+    padding: 0px 0px 100% 0px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+//======================================================
+
+/*Media Queries*/
+//======================================================
+@media screen and (max-width: 1400px) {
+  .welcome__sub-title {
+    width: 85%;
+  }
+  .care__column {
+    &:not(:last-child) {
+      margin: 0px 0px 30px 0px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .welcome__body,
+  .procedures__body {
+    padding: 30px;
+  }
+  .procedures {
+    margin: 100px 0px 50px;
+  }
+  .care__body {
+    padding: 105px 30px 50px;
+    flex-direction: column;
+  }
+  .care__column {
+    width: 100%;
+  }
+  .care__img {
+    margin: 30px 0px 0px 0px;
+    padding: 0px 0px 70% 0px;
+  }
+  .care__items {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .welcome__sub-title {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .welcome__body {
+    flex-direction: column;
+  }
+  .welcome__column {
+    width: 100%;
+  }
+  .welcome__img {
+    margin: 30px 0px 0px 0px;
+    padding: 0px 0px 70% 0px;
+  }
+  .care__img {
+    padding: 0px 0px 100% 0px;
+  }
+  .welcome__text {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .welcome__sub-title {
+    line-height: 50px;
+    font-size: 36px;
+  }
+  .welcome__text {
+    font-size: 18px;
+  }
+  .sub-title {
+    line-height: 50px;
+    font-size: 36px;
+  }
+  .text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .welcome__img {
+    padding: 0px 0px 100% 0px;
+  }
+  .welcome__sub-title {
+    line-height: 40px;
+    font-size: 32px;
+  }
+  .welcome__text,
+  .procedures__info {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 10px 0px;
+  }
+  .care__item {
+    padding: 10px 20px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .welcome__sub-title {
+    margin: 15px 0px 0px 0px;
+    line-height: 30px;
+    font-size: 28px;
+  }
+  .welcome__text,
+  .procedures__info {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 15px 0px 10px;
+  }
+  .welcome__body,
+  .procedures__body,
+  .care__body {
+    padding: 40px 10px 50px;
+  }
+  .care__item {
+    width: 260px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .welcome__sub-title {
+    margin: 10px 0px 0px 0px;
+    line-height: 30px;
+    font-size: 24px;
+  }
+  .care__sub-title {
+    margin: 15px 0px;
+  }
+  .procedures__body {
+    grid-template-columns: 1fr;
+  }
+  .sub-title {
+    line-height: 30px;
+    font-size: 28px;
+  }
+}
+//======================================================
